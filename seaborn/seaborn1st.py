@@ -8,5 +8,5 @@ tips = sns.load_dataset('tips')
 #print(tips.head())
 hue_color = {'Yes': 'green', 'No': 'red'}
 # plot the data
-sns.scatterplot(x= 'total_bill', y= 'tip', data= tips, hue= 'smoker', hue_order= ['No', 'Yes'], palette= hue_color)
+sns.relplot(x= "total_bill", y="tip", data= tips, kind= "scatter", row="time", col='day', col_order= ['Thur', 'Fri', 'Sat', 'Sun'])
 plt.show()
