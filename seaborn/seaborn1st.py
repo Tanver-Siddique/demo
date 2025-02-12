@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the data
-tips = sns.load_dataset('tips')
+mpg = sns.load_dataset('mpg')
 #print(tips.head())
-hue_color = {'Yes': 'green', 'No': 'red'}
-# plot the data
-sns.relplot(x= "total_bill", y="tip", data= tips, kind= "scatter", row="time", col='day', col_order= ['Thur', 'Fri', 'Sat', 'Sun'])
+# Create the acatter plot
+sns.relplot(x='model_year', y='mpg', data=mpg, kind='line', ci=None, style='origin', hue='origin', markers='o', dashes=False)
+
 plt.show()
